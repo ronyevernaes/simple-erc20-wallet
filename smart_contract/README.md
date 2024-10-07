@@ -1,8 +1,11 @@
-# Simple ERC-20 Smart Contract
+# SimpleX ERC-20 Smart Contract
 
 This token was generated using Hardhat.
 
-Some useful comands:
+## Contract Address - Sepolia Network
+0x19f23D80AEA622C37D79a9B64ba85Ba2149ED85f
+
+## Useful comands
 
 ```shell
 # Shows the Hardhat help
