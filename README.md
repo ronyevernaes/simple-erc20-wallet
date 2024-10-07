@@ -3,7 +3,7 @@
 DApp that allows users to view their balance and transfer tokens to other users.
 
 # Features
-- [ ] Deploy an ERC-20 Token on Sepolia or any other testnet.
+- [x] Deploy an ERC-20 Token on Sepolia or any other testnet.
 - [ ] Login Screen. The user should be able to connect their wallet to the
   application through a login screen.
 - [ ] Display Information. If the user has connected their wallet, they should
