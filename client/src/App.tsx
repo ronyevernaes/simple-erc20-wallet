@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi";
 
 import { config } from "./config";
-import { Header } from "./components/layout";
+import { Footer, Header } from "./components/layout";
 
 const queryClient = new QueryClient();
 
@@ -18,9 +18,9 @@ const App: FC = () => {
 
           <button>Login</button>
 
-          <footer className="py-2 w-full text-center">
+          <Footer>
             {new Date().getFullYear()} &copy; All rights reserved
-          </footer>
+          </Footer>
         </div>
       </QueryClientProvider>
     </WagmiProvider>
