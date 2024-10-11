@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "test": "yarn cy:run",
+    "test-dev": "yarn cy:run --no-exit",
     "cy": "NODE_ENV=test cypress",
     "cy:run": "yarn cy run --component",
     "cy:open": "yarn cy open --component"
