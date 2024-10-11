@@ -24,5 +24,13 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
     },
+    overrides: [
+      {
+        files: ["**/*.cy.{js,jsx,ts,tsx}"],
+        rules: {
+          "@typescript-eslint/no-unused-expressions": "off",
+        },
+      },
+    ],  
   },
 )
