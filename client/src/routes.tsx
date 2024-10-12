@@ -1,11 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 
 import { PrivateOutlet, PublicOutlet } from "./components/outlets";
-import { LoginPage } from "./pages";
+import { AccountPage, LoginPage } from "./pages";
 
 export const ROUTES = {
-  LOGIN: "/login",
+  ACCOUNT: "/account",
   HOME: "/",
+  LOGIN: "/login",
 };
 
 export const AppRoutes: React.FC = () => (
@@ -14,6 +15,8 @@ export const AppRoutes: React.FC = () => (
       <Route path={ROUTES.LOGIN} element={<LoginPage />} />
     </Route>
 
-    <Route path={ROUTES.HOME} element={<PrivateOutlet />} />
+    <Route path={ROUTES.HOME} element={<PrivateOutlet />}>
+      <Route path={ROUTES.ACCOUNT} element={<AccountPage />} />
+    </Route>
   </Routes>
 );
