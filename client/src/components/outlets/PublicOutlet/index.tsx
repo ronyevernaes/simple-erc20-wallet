@@ -2,7 +2,7 @@ import { FC, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useAccount } from "wagmi";
 
-import { ROUTES } from "../../../routes";
+import { ROUTES } from "../../../router";
 
 export const PublicOutlet: FC = () => {
   const { isConnected } = useAccount();
@@ -11,9 +11,7 @@ export const PublicOutlet: FC = () => {
   useEffect(() => {
     if (isConnected) {
       navigate(ROUTES.ACCOUNT);
-    } else {
-      navigate(ROUTES.LOGIN);
-    };
+    }
   }, [navigate, isConnected]);
 
   return (
