@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import { Header } from ".";
+import "../../../index.css";
 
 describe("<Header />", () => {
   let dataTest: string;

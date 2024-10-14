@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import { Layout } from ".";
+import "../../../index.css";
 
 describe("<Layout />", () => {
   let dataTest: string;

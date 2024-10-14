@@ -1,4 +1,5 @@
 import { InputText } from ".";
+import "../../../index.css";
 
 describe("<InputText />", () => {
   let name: string;

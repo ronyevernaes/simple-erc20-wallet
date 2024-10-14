@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import { Footer } from ".";
+import "../../../index.css";
 
 describe("<Footer />", () => {
   let dataTest: string;

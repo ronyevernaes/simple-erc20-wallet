@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import { Button } from ".";
+import "../../../index.css";
 
 describe("<Button />", () => {
   let dataTest: string;
