@@ -1,9 +1,9 @@
 import { FC } from "react";
-import { useAccount, useBalance, useDisconnect } from "wagmi";
+import { useAccount, useBalance } from "wagmi";
 
-import { Button } from "../../components/ui";
 import { SIMPLEX_ADDRESS } from "../../constants";
 import { format} from "../../utils";
+import { DisconnectAction } from "./DisconnectAction";
 
 export const AccountPage: FC = () => {
   const account = useAccount();
@@ -13,8 +13,6 @@ export const AccountPage: FC = () => {
     token: SIMPLEX_ADDRESS,
   });
 
-  const { disconnect } = useDisconnect();
-  
   if (!balance || !balance.data) {
     return null;
   }
@@ -33,11 +31,7 @@ export const AccountPage: FC = () => {
         {symbol}: {format(value)}
       </div>
 
-      <Button
-        onClick={() => disconnect()}
-      >
-        Disconnect
-      </Button>
+      <DisconnectAction />
     </div>
   );
 };
