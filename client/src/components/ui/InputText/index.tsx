@@ -20,6 +20,7 @@ export const InputText: FC<Props> = ({
   return (
     <div className="flex flex-col gap-1">
       <input
+        className={error ? "!border-red-500 !border-2" : ""}
         name={name}
         type="text"
         value={value}
