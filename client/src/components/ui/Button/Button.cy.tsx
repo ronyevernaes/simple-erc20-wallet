@@ -44,4 +44,34 @@ describe("<Button />", () => {
       expect(onClick).to.have.been.called;
     });
   });
+
+  it("asserts that the button is enabled by default", () => {
+    cy.mount(
+      <Button dataTest={dataTest}>
+        {content}
+      </Button>
+    );
+
+    cy.get(`[data-test="${dataTest}"]`)
+      .should("not.have.attr", "disabled");
+  });
+
+  it("asserts that the button is disabled", () => {
+    const onClick = cy.stub();
+
+    cy.mount(
+      <Button dataTest={dataTest} disabled onClick={onClick}>
+        {content}
+      </Button>
+    );
+
+    cy.get(`[data-test="${dataTest}"]`)
+      .should("have.attr", "disabled");
+
+    cy.get(`[data-test="${dataTest}"]`)
+      .click({ force: true })
+      .then(() => {
+        expect(onClick).not.to.have.been.called;
+      });
+  });
 });
