@@ -1,9 +1,9 @@
 import { FC } from "react";
 import { Address } from "viem";
 import { useBalance } from "wagmi";
+import { formatEther } from "viem";
 
 import { SIMPLEX_ADDRESS } from "../../../constants";
-import { format } from "../../../utils";
 
 type Props = {
   address?: Address;
@@ -21,7 +21,7 @@ export const BalanceBanner: FC<Props> = ({ address }) => {
 
   return (
     <div>
-      {balance.data.symbol}: {format(balance.data.value)}
+      {balance.data.symbol}: {formatEther(balance.data.value)}
     </div>
   );
 };
