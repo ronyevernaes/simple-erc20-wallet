@@ -9,6 +9,7 @@ export const DisconnectAction: FC = () => {
   return (
     <Button
       onClick={() => disconnect()}
+      className="bg-red-500"
     >
       Disconnect
     </Button>
