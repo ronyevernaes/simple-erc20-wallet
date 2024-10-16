@@ -4,9 +4,7 @@ type Props = {
   value: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   mask?: (value: string) => string;
-  validate?: (value: string) => (boolean | string);
   error?: string;
-  onError?: (error: string) => void;
   dataTest?: string;
 } & InputHTMLAttributes<HTMLInputElement>;
 
@@ -15,7 +13,6 @@ export const InputText: FC<Props> = ({
   error,
   onChange,
   mask,
-  validate,
   dataTest,
   ...rest
 }) => {
