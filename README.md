@@ -13,7 +13,7 @@ DApp that allows users to view their balance and transfer tokens to other users.
   redirected back to the login screen.
 - [x] Sending Transactions. The user must be able to send tokens to an Ethereum
   address.
-- [ ] Gas estimation. The user should be able to see a gas fees estimation
+- [x] Gas estimation. The user should be able to see a gas fees estimation
   before send a transaction.
 
 # Future Improvements
@@ -21,4 +21,5 @@ DApp that allows users to view their balance and transfer tokens to other users.
   on writing the contract. However, on getting the transaction receipt, there
   are other errors that can be handled.
 - [ ] Add variants for different UI components (Button, InputText, etc).
+- [ ] Include transaction fees estimation.
 - [ ] Increase test coverage.

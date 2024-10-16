@@ -11,6 +11,7 @@ import { Button, InputText, Message } from "../../../components/ui";
 import { SIMPLEX_ADDRESS } from "../../../constants";
 import { useValidateAddress } from "../../../hooks/useValidateAddress";
 import { maskNumber } from "../../../utils";
+import { GasFeesBanner } from "../GasFeesBanner";
 
 type Props = {};
 
@@ -82,6 +83,8 @@ export const TransferForm: FC<Props> = () => {
         required
         value={input.amount}
       />
+
+      <GasFeesBanner />
 
       <Button
         disabled={!isValidInput() || isPending || isLoading}
