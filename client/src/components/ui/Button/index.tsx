@@ -1,26 +1,22 @@
-import { FC, ReactNode } from "react";
+import { FC, ReactNode, ButtonHTMLAttributes } from "react";
 
 type Props = {
   children: ReactNode;
-  disabled?: boolean;
   dataTest?: string;
-  onClick?: () => void;
   className?: string;
-};
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const Button: FC<Props> = ({
   children,
-  disabled,
   dataTest,
-  onClick,
   className,
+  ...rest
 }) => {
   return (
     <button
-      disabled={disabled}
       data-test={dataTest}
-      onClick={onClick}
       className={className}
+      {...rest}
     >
       {children}
     </button>
