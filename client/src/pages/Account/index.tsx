@@ -3,12 +3,13 @@ import { useAccount } from "wagmi";
 
 import { DisconnectAction } from "./DisconnectAction";
 import { BalanceBanner } from "./BalanceBanner";
+import { TransferForm } from "./TransferForm";
 
 export const AccountPage: FC = () => {
   const account = useAccount();
 
   return (
-    <div className="flex flex-col gap-8 text-center">
+    <div className="flex flex-col gap-6 text-center">
       <h1 className="font-bold text-2xl">Account</h1>
     
       {account && (
@@ -16,6 +17,8 @@ export const AccountPage: FC = () => {
       )}
 
       <BalanceBanner address={account?.address} />
+
+      <TransferForm />
 
       <DisconnectAction />
     </div>

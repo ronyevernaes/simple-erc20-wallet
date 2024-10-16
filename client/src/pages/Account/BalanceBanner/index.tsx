@@ -1,7 +1,6 @@
 import { FC } from "react";
-import { Address } from "viem";
+import { Address, formatEther } from "viem";
 import { useBalance } from "wagmi";
-import { formatEther } from "viem";
 
 import { SIMPLEX_ADDRESS } from "../../../constants";
 

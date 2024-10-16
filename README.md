@@ -11,7 +11,7 @@ DApp that allows users to view their balance and transfer tokens to other users.
 - [x] Disconnecting the Wallet. The user should have the option to disconnect
   their wallet at any time. If the wallet is disconnected, the user should be
   redirected back to the login screen.
-- [ ] Sending Transactions. The user must be able to send tokens to an Ethereum
+- [x] Sending Transactions. The user must be able to send tokens to an Ethereum
   address.
 - [ ] Gas estimation. The user should be able to see a gas fees estimation
   before send a transaction.
