@@ -89,4 +89,22 @@ describe("<InputText />", () => {
       .should("exist")
       .should("contain.text", error);
   });
+
+  it("calls mask handler when input value changes", () => {
+    const mask = cy.stub();
+
+    cy.mount(
+      <InputText
+        name={name}
+        value={inputValue}
+        onChange={() => {}}
+        dataTest={dataTest}
+        mask={mask}
+      />
+    );
+
+    cy.get(`[data-test="${dataTest}"]`).type("New value").then(() => {
+      expect(mask).to.have.been.called;
+    });
+  });
 });
