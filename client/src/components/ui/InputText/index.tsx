@@ -1,23 +1,23 @@
-import { FC, ChangeEvent } from "react";
+import { FC, ChangeEvent, InputHTMLAttributes } from "react";
 
 type Props = {
-  name: string;
   value: string;
-  placeholder?: string;
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   mask?: (value: string) => string;
+  validate?: (value: string) => (boolean | string);
   error?: string;
+  onError?: (error: string) => void;
   dataTest?: string;
-};
+} & InputHTMLAttributes<HTMLInputElement>;
 
 export const InputText: FC<Props> = ({
-  name,
   value,
   error,
-  placeholder,
   onChange,
   mask,
+  validate,
   dataTest,
+  ...rest
 }) => {
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const maskedValue = mask ? mask(e.target.value) : e.target.value;
@@ -30,12 +30,11 @@ export const InputText: FC<Props> = ({
     <div className="flex flex-col gap-1">
       <input
         className={error ? "!border-red-500 !border-2" : ""}
-        name={name}
         type="text"
         value={value}
-        placeholder={placeholder}
         onChange={handleInputChange}
         data-test={dataTest}
+        {...rest}
       />
 
       {error && (
